@@ -1,0 +1,82 @@
+[gd_scene format=2]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 0.666656
+margin_right = -2.0
+margin_bottom = 0.666626
+custom_constants/margin_right = 60
+custom_constants/margin_top = 60
+custom_constants/margin_left = 60
+custom_constants/margin_bottom = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 1220.0
+margin_bottom = 964.0
+
+[node name="GameArea" type="MarginContainer" parent="HBoxContainer"]
+margin_right = 578.0
+margin_bottom = 904.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 10
+
+[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/GameArea"]
+margin_right = 568.0
+margin_bottom = 904.0
+
+[node name="Stats" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 582.0
+margin_right = 1160.0
+margin_bottom = 904.0
+size_flags_horizontal = 3
+
+[node name="PointContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
+margin_right = 578.0
+margin_bottom = 298.0
+size_flags_vertical = 3
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 20
+
+[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/Stats/PointContainer"]
+margin_left = 10.0
+margin_right = 578.0
+margin_bottom = 278.0
+
+[node name="InfoContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
+margin_top = 302.0
+margin_right = 578.0
+margin_bottom = 601.0
+size_flags_vertical = 3
+custom_constants/margin_right = 100
+custom_constants/margin_top = 20
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 20
+
+[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/Stats/InfoContainer"]
+margin_left = 100.0
+margin_top = 20.0
+margin_right = 478.0
+margin_bottom = 279.0
+
+[node name="NextBlockContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
+margin_top = 605.0
+margin_right = 578.0
+margin_bottom = 904.0
+size_flags_vertical = 3
+custom_constants/margin_right = 170
+custom_constants/margin_top = 40
+custom_constants/margin_left = 170
+custom_constants/margin_bottom = 40
+
+[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/Stats/NextBlockContainer"]
+margin_left = 170.0
+margin_top = 40.0
+margin_right = 408.0
+margin_bottom = 259.0
