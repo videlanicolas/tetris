@@ -29,41 +29,36 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 60.0
 margin_top = 60.0
-margin_right = 1220.0
+margin_right = 1340.0
 margin_bottom = 964.0
 
 [node name="GameArea" type="MarginContainer" parent="HBoxContainer"]
-margin_right = 573.0
+margin_right = 638.0
 margin_bottom = 904.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 10
 
-[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/GameArea"]
-margin_right = 563.0
-margin_bottom = 904.0
-rect_min_size = Vector2( 550, 904 )
-
 [node name="Stats" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 577.0
-margin_right = 1160.0
+margin_left = 642.0
+margin_right = 1280.0
 margin_bottom = 904.0
 size_flags_horizontal = 3
 
 [node name="PointContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
-margin_right = 583.0
-margin_bottom = 288.0
+margin_right = 638.0
+margin_bottom = 298.0
 size_flags_vertical = 3
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Stats/PointContainer"]
 margin_left = 10.0
-margin_right = 583.0
-margin_bottom = 268.0
+margin_right = 638.0
+margin_bottom = 278.0
 
 [node name="Points" type="Label" parent="HBoxContainer/Stats/PointContainer/VBoxContainer"]
-margin_right = 573.0
-margin_bottom = 132.0
+margin_right = 628.0
+margin_bottom = 137.0
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
 text = "345234523"
@@ -71,9 +66,9 @@ align = 1
 valign = 1
 
 [node name="Speed" type="Label" parent="HBoxContainer/Stats/PointContainer/VBoxContainer"]
-margin_top = 136.0
-margin_right = 573.0
-margin_bottom = 268.0
+margin_top = 141.0
+margin_right = 628.0
+margin_bottom = 278.0
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 2 )
 text = "Speed: 3"
@@ -81,9 +76,9 @@ align = 1
 valign = 1
 
 [node name="InfoContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
-margin_top = 292.0
-margin_right = 583.0
-margin_bottom = 580.0
+margin_top = 302.0
+margin_right = 638.0
+margin_bottom = 601.0
 size_flags_vertical = 3
 custom_constants/margin_right = 80
 custom_constants/margin_top = 20
@@ -93,8 +88,8 @@ custom_constants/margin_bottom = 20
 [node name="Label" type="Label" parent="HBoxContainer/Stats/InfoContainer"]
 margin_left = 100.0
 margin_top = 20.0
-margin_right = 503.0
-margin_bottom = 268.0
+margin_right = 558.0
+margin_bottom = 279.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 2 )
@@ -105,18 +100,11 @@ p - pause"
 valign = 1
 
 [node name="NextBlockContainer" type="MarginContainer" parent="HBoxContainer/Stats"]
-margin_top = 584.0
-margin_right = 583.0
+margin_top = 605.0
+margin_right = 638.0
 margin_bottom = 904.0
 size_flags_vertical = 3
 custom_constants/margin_right = 170
 custom_constants/margin_top = 40
 custom_constants/margin_left = 170
 custom_constants/margin_bottom = 40
-
-[node name="PLACEHOLDER" type="Panel" parent="HBoxContainer/Stats/NextBlockContainer"]
-margin_left = 170.0
-margin_top = 40.0
-margin_right = 413.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 243, 240 )
