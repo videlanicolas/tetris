@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/PlayGrid.tscn" type="PackedScene" id=1]
 
 [node name="PanelContainer" type="PanelContainer"]
-visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -11,3 +11,9 @@ __meta__ = {
 }
 
 [node name="GridContainer" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1273.0
+margin_bottom = 1017.0
