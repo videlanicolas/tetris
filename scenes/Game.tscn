@@ -38,6 +38,7 @@ margin_bottom = 964.0
 margin_right = 573.0
 margin_bottom = 904.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/margin_right = 10
 
 [node name="PanelContainer" parent="HBoxContainer/GameArea" instance=ExtResource( 3 )]

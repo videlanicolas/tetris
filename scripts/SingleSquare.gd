@@ -7,3 +7,6 @@ func _ready():
 
 func clear():
 	self.color = TRANSPARENT
+
+func occupied():
+	return self.color != TRANSPARENT
