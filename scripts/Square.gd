@@ -1,6 +1,6 @@
 extends Tetro
 
-func _init(i, j, limit_x, limit_y, color):
+func _init(i, j, color):
 	self.Points = [
 		{"i": i, "j": j},
 		{"i": i, "j": j+1},
@@ -8,5 +8,3 @@ func _init(i, j, limit_x, limit_y, color):
 		{"i": i+1, "j": j+1},
 	]
 	self.color = color
-	self.LimitX = limit_x
-	self.LimitY = limit_y

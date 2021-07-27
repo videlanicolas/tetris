@@ -7,6 +7,8 @@ const Square_tetro = preload("res://scripts/Square.gd")
 
 var grid_matrix = Array()
 var current_tetro
+var LimitY: int
+var LimitX: int
 
 enum Shapes {
 	L1,
@@ -19,12 +21,12 @@ enum Shapes {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var r = createGrid(
+	createGrid(
 		self.rect_size.x, 
 		self.rect_size.y)
 	clear()
-	current_tetro = Square_tetro.new(0, 0, r["w"], r["h"], Color.aqua)
-	paint_tetro(current_tetro)
+	current_tetro = Square_tetro.new(10, 0, Color.aqua)
+	paint_current_tetro()
 	$Timer.start()
 
 func createGrid(width, height):
@@ -40,7 +42,8 @@ func createGrid(width, height):
 			add_child(inst)
 			tmp_array.append(inst)
 		grid_matrix.append(tmp_array)
-	return {"w": w_amount, "h": h_amount}
+	LimitX = w_amount
+	LimitY = h_amount
 
 func clear():
 	for a in grid_matrix:
@@ -51,14 +54,24 @@ func paint_point(i, j):
 	grid_matrix[i][j].color = Color.aqua
 
 func _on_Timer_timeout():
-	clear_tetro(current_tetro)
-	current_tetro.down()
-	paint_tetro(current_tetro)
+	if current_tetro:
+		if not check_current_tetro_bounds():
+			current_tetro = null
+			return
+		clear_current_tetro()
+		current_tetro.down()
+		paint_current_tetro()
 
-func clear_tetro(tetro):
-	for p in tetro.Points:
+func check_current_tetro_bounds():
+	for p in current_tetro.Points:
+		if p.i >= (LimitY - 1):
+			return false
+	return true
+
+func clear_current_tetro():
+	for p in current_tetro.Points:
 		grid_matrix[p["i"]][p["j"]].clear()
 
-func paint_tetro(tetro):
-	for p in tetro.Points:
-		grid_matrix[p["i"]][p["j"]].color = tetro.color
+func paint_current_tetro():
+	for p in current_tetro.Points:
+		grid_matrix[p["i"]][p["j"]].color = current_tetro.color
